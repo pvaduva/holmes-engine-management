@@ -1,4 +1,4 @@
-FROM openresty/openresty:alpine
+FROM onapmulti/openresty:alpine
 
 MAINTAINER "Guangrong Fu" <fu.guangrong@zte.com.cn>
 
@@ -34,7 +34,7 @@ RUN apk upgrade \
     && apk update \
     && apk add --no-cache curl \
     && apk add --no-cache wget \
-    && apk add --no-cache postgresql-client=10.8-r0 \
+    && apk add --no-cache postgresql-client \
     && apk add --no-cache nss
 
 #switch the user to holmes

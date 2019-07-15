@@ -233,16 +233,16 @@
                     <plugin>
                         <groupId>io.fabric8</groupId>
                         <artifactId>docker-maven-plugin</artifactId>
-                        <version>0.16.5</version>
+                        <version>0.28.0</version>
                         <inherited>false</inherited>
                         <configuration>
                             <images>
                                 <image>
-                                    <name>onap/holmes/engine-management</name>
+                                    <name>onapmulti/holmes-engine-management-${os.arch}</name>
                                     <build>
                                         <cleanup>try</cleanup>
                                         <dockerFileDir>${basedir}/target/version/</dockerFileDir>
-                                        <dockerFile>${basedir}/target/version/Dockerfile</dockerFile>
+                                        <dockerFile>Dockerfile</dockerFile>
                                         <tags>
                                             <tag>${project.version}</tag>
                                             <tag>${project.version}-${build.number}</tag>
